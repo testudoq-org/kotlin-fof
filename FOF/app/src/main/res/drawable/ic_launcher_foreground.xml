@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Power symbol centered in launcher safe zone -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58,27L50,27L50,57L58,57L58,27Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75.74,35.74l-5.65,5.66C74.03,45.45 76,50.48 76,56c0,11.05 -8.95,20 -20,20s-20,-8.95 -20,-20c0,-5.52 2.97,-10.55 7.91,-13.6l-5.65,-5.66C32.14,41.42 28,48.38 28,56c0,15.46 12.54,28 28,28s28,-12.54 28,-28c0,-7.62 -3.14,-14.58 -8.26,-19.26Z" />
+</vector>

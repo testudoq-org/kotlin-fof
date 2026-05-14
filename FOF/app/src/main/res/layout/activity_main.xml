@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0F0F0F"
+    android:padding="24dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_power_off"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        android:text="SHUTDOWN"
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_power_off"
+        app:iconSize="48dp"
+        app:iconGravity="top"
+        app:iconTint="#FFFFFF"
+        app:backgroundTint="#D32F2F"
+        app:cornerRadius="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_restart"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="48dp"
+        android:text="RESTART"
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_restart"
+        app:iconSize="48dp"
+        app:iconGravity="top"
+        app:iconTint="#FFFFFF"
+        app:backgroundTint="#1E88E5"
+        app:cornerRadius="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FOF</string>
+    <string name="accessibility_service_label">FOF Power Service</string>
+    <string name="accessibility_service_description">Enables FOF to trigger the system power menu for shutdown and restart actions.</string>
+</resources>
