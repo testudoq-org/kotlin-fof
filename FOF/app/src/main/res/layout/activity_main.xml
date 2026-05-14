@@ -21,42 +21,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="48dp" />
 
-    <!-- Single Power Menu card -->
+    <!-- Entire card is the tap target for the power menu -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_power_menu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:focusable="true"
         app:cardBackgroundColor="#1A1A1A"
         app:cardCornerRadius="24dp"
         app:cardElevation="8dp"
+        app:rippleColor="#33FFFFFF"
         app:strokeColor="#2A2A2A"
         app:strokeWidth="1dp"
         app:layout_constraintTop_toBottomOf="@id/tv_app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_why_foff"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.45">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:paddingTop="48dp"
-            android:paddingBottom="48dp"
+            android:paddingTop="56dp"
+            android:paddingBottom="56dp"
             android:paddingStart="24dp"
             android:paddingEnd="24dp">
 
             <!-- Power icon -->
             <ImageView
                 android:id="@+id/iv_power_icon"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:src="@drawable/ic_power_off"
-                android:contentDescription="Power"
+                android:contentDescription="Open power menu"
                 app:tint="#E0E0E0"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginBottom="28dp" />
 
             <!-- Main label -->
             <TextView
@@ -69,7 +74,7 @@
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium"
                 android:letterSpacing="0.05"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="14dp" />
 
             <!-- Subtitle -->
             <TextView
@@ -77,32 +82,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Emergency · Restart · Power Off · Lockdown"
-                android:textColor="#808080"
+                android:textColor="#606060"
                 android:textSize="13sp"
-                android:gravity="center"
-                android:layout_marginBottom="40dp" />
-
-            <!-- Tap target button -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_power_menu"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:text="Open Power Controls"
-                android:textSize="16sp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="#1E1E1E"
-                app:strokeColor="#3A3A3A"
-                app:strokeWidth="1dp"
-                app:cornerRadius="16dp"
-                app:icon="@drawable/ic_power_off"
-                app:iconSize="20dp"
-                app:iconTint="#FFFFFF"
-                app:iconGravity="textStart" />
+                android:gravity="center" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <!-- WHY FOFF? — reveals backstory on tap -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_why_foff"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="WHY FOFF?"
+        android:textSize="12sp"
+        android:textColor="#3A3A3A"
+        android:letterSpacing="0.1"
+        app:layout_constraintTop_toBottomOf="@id/card_power_menu"
+        app:layout_constraintBottom_toTopOf="@id/tv_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Bottom hint -->
     <TextView
@@ -110,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Requires Accessibility permission"
-        android:textColor="#2E2E2E"
+        android:textColor="#2A2A2A"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
