@@ -13,24 +13,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<MaterialButton>(R.id.btn_power_off).setOnClickListener {
-            triggerPowerAction()
-        }
-
-        findViewById<MaterialButton>(R.id.btn_restart).setOnClickListener {
+        findViewById<MaterialButton>(R.id.btn_power_menu).setOnClickListener {
             triggerPowerAction()
         }
     }
 
     private fun triggerPowerAction() {
         if (!FofAccessibilityService.isRunning()) {
-            Toast.makeText(this, "Please enable FOF Power Service in Accessibility settings", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Enable FOFF Power Service in Accessibility settings first", Toast.LENGTH_LONG).show()
             startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
             return
         }
         val success = FofAccessibilityService.triggerPowerDialog()
         if (!success) {
-            Toast.makeText(this, "Failed to open power menu. Try toggling the service off/on.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Couldn't open power menu — toggle the service off/on.", Toast.LENGTH_SHORT).show()
         }
     }
 }

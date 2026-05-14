@@ -1,8 +1,10 @@
 <resources>
     <style name="Theme.FOF" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#D32F2F</item>
-        <item name="colorPrimaryVariant">#B71C1C</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimary">#E0E0E0</item>
+        <item name="colorPrimaryVariant">#BDBDBD</item>
+        <item name="colorOnPrimary">#0F0F0F</item>
+        <item name="colorSurface">#1A1A1A</item>
+        <item name="colorOnSurface">#FFFFFF</item>
         <item name="android:statusBarColor">#0F0F0F</item>
         <item name="android:navigationBarColor">#0F0F0F</item>
         <item name="android:windowBackground">#0F0F0F</item>

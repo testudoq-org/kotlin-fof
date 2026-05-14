@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FOF</string>
-    <string name="accessibility_service_label">FOF Power Service</string>
-    <string name="accessibility_service_description">Enables FOF to trigger the system power menu for shutdown and restart actions.</string>
+    <string name="app_name">FOFF</string>
+    <string name="accessibility_service_label">FOFF Power Service</string>
+    <string name="accessibility_service_description">Enables FOFF to open the Android system power menu (Power Off, Restart, Emergency, Lockdown).</string>
 </resources>
