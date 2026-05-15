@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,6 +8,21 @@ plugins {
 android {
     namespace = "com.fof.fof"
     compileSdk = 36
+
+    val signingProps = Properties()
+    val localPropsFile = rootProject.file("local.properties")
+    if (localPropsFile.exists()) {
+        signingProps.load(localPropsFile.inputStream())
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = signingProps.getProperty("signing.storeFile")?.let { file(it as String) }
+            storePassword = signingProps.getProperty("signing.storePassword")
+            keyAlias = signingProps.getProperty("signing.keyAlias")
+            keyPassword = signingProps.getProperty("signing.keyPassword")
+        }
+    }
 
     defaultConfig {
         applicationId = "com.fof.fof"
@@ -22,6 +39,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            val releaseConfig = signingConfigs.getByName("release")
+            if (releaseConfig.storeFile?.exists() == true) {
+                signingConfig = releaseConfig
+            }
         }
     }
 
