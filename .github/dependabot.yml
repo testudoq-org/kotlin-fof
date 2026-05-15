@@ -1,0 +1,21 @@
+version: 2
+updates:
+  # Gradle dependencies (libs.versions.toml + build.gradle.kts)
+  - package-ecosystem: "gradle"
+    directory: "/FOF"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+
+  # GitHub Actions versions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
