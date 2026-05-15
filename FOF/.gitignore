@@ -2,9 +2,6 @@
 build/
 **/build/
 
-# Gradle wrapper jar (binary, downloaded automatically)
-gradle/wrapper/gradle-wrapper.jar
-
 # Android local config (machine-specific)
 local.properties
 
