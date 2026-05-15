@@ -39,7 +39,7 @@ jobs:
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
         env:
-          BUILD_TOOLS_VERSION: "35.0.0"
+          BUILD_TOOLS_VERSION: "36.0.0"
 
       - name: Rename signed APK
         run: mv "${{ steps.sign.outputs.signedReleaseFile }}" FOF/app/build/outputs/apk/release/fof-release.apk
