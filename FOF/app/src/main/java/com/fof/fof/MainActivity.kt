@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 
@@ -39,16 +39,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showWhyFoffDialog() {
-        AlertDialog.Builder(this, R.style.Theme_FOF_Dialog)
-            .setTitle("Why FOFF?")
+        MaterialAlertDialogBuilder(this)
+            .setTitle("FOFF – Feckin off!")
             .setMessage(
-                "FOFF stands for Feck Off.\n\n" +
-                "Born out of pure frustration — fumbling through menus, " +
-                "swiping the wrong way, desperately hunting for the power " +
-                "button at 2am while your phone refuses to cooperate.\n\n" +
-                "One tap. That's all it should ever take."
+                "A quick tool to Power Off & Restart.\n\n" +
+                "Requires accessibility approval and over time may be restricted " +
+                "due to Android's annoyance of changing security protocols.\n\n" +
+                "Tired of fumbling through menus just to turn your damn phone off?\n\n" +
+                "FOFF gives you two big, simple buttons: Power Off and Restart.\n\n" +
+                "No more nonsense. No more hunting for the power menu.\n\n" +
+                "Just tap and done.\n\n" +
+                "Channeling that inner Celtic rage since 2026.\n\n" +
+                "Feckin Off!"
             )
-            .setPositiveButton("Fair enough") { dialog, _ -> dialog.dismiss() }
+            .setPositiveButton("Feckin right") { dialog, _ -> dialog.dismiss() }
             .show()
     }
 }
