@@ -52,11 +52,14 @@ FOFF doesn't implement its own shutdown logic. It calls `performGlobalAction(GLO
    adb install app\build\outputs\apk\debug\fof-debug.apk
    ```
 
-### Option B — Sideload release APK
+### Option B — Download from GitHub Releases
 
-1. Enable **Install from unknown sources** on your device
-2. Copy `fof-release.apk` to your device
-3. Tap the file in your file manager to install
+1. Go to the [Releases page](../../releases/latest)
+2. Download `fof-release.apk` from the release assets
+3. Enable **Install from unknown sources** on your device
+4. Tap the downloaded APK to install
+
+> Verify the APK signature before installing — see [SECURITY.md](SECURITY.md) for the `apksigner verify` command and expected certificate fingerprint.
 
 ---
 
@@ -144,6 +147,12 @@ This project is licensed under the **Creative Commons Attribution-NonCommercial 
 You are free to use, share, and adapt this project for non-commercial purposes with attribution. Commercial use is not permitted.
 
 See [LEGAL.md](LEGAL.md) for full terms.
+
+---
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for the vulnerability reporting policy, dependency update process, and APK verification instructions.
 
 ---
 
